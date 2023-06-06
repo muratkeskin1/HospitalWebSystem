@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<h1 th:text="${result}"/>
+<form class="form-group" action="#" th:action="@{/save}" th:object="${hospital}" method="post">
+    <label>hastane ismi:</label>
+    <input class="form-control" type ="text" th:field="*{hospitalName}"/>
+    <label>hastane şifresi:</label>
+    <input class="form-control col-3" type ="text" th:field="*{hospitalPassword}"/>
+    <button type="submit"> login </button>
+</form>
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+</body>
+</html>
